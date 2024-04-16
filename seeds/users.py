@@ -2,7 +2,6 @@ from app.models import db, environment, SCHEMA
 from app.models.db import User
 from sqlalchemy.sql import text
 from .data import users
-import datetime
 
 
 def seed_users():
@@ -13,10 +12,10 @@ def seed_users():
             email = user["email"],
             first_name = user["first_name"],
             dietary_preferences = user["dietary_preferences"],
-            recipes = user["recipes"] 
+            recipes = user["recipes"],
+            ingredients = user["ingredients"], 
         )
         db.session.add(new_user)
-
     db.session.commit()
 
 def undo_users():
@@ -27,4 +26,3 @@ def undo_users():
     
     db.session.commit()
 
-    

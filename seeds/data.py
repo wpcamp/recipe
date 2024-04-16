@@ -9,43 +9,41 @@ users = [
     }
 ]
 
-dietary_preferences = [
+recipes = [
     {
-        "id":1,
-        "name": "Vegetarian"
+        "recipe_id": 1,
+        "user_id": 1,
+        "name": "Smashburger",
+        "description": "Best smashburger recipe ever!",
+        "cuisine_tag": "American",
+        "dietary_tag": "",
+        "taste_tag": "Savory",
+        "prep_time": "0.1",
+        "cooking_time": "0.25",
+        "servings": "4",
     },
     {
-        "id":2,
-        "name": "Vegan"
-    },
+        "recipe_id": 2,
+        "user_id": 1,
+        "name": "Garlic Bread",
+        "description": "Garlicy and delicious!",
+        "cuisine_tag": "Italian",
+        "dietary_tag": "Vegan",
+        "taste_tag": "Buttery",
+        "prep_time": "0.2",
+        "cooking_time": "0.3",
+        "servings": "6",
+    }, 
     {
-        "id":3,
-        "name": "Gluten Free"
-    },
-    {
-        "id":4,
-        "name": "Dairy Free"
-    },
-    {
-        "id":5,
-        "name": "Keto"
-    },
-    {
-        "id":6,
-        "name": "Paleo"
-    },
-    {
-        "id":7,
-        "name": "Pescatarian"
-    },
-    {
-        "id":8,
-        "name": "Kosher"
-    },
-    {
-        "id":9,
-        "name": "Halal"
+        "recipe_id": 3,
+        "user_id": 1,
+        "name": "Enchiladas",
+        "description": "Delicious and easy to make",
+        "cuisine_tag": "Mexican",
+        "dietary_tag": "Keto",
+        "taste_tag": "Spicy",
+        "prep_time": "0.4",
+        "cooking_time": "0.5",
+        "servings": "8",
     }
 ]
-
-
