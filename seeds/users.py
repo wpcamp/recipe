@@ -1,6 +1,7 @@
 from app.models import db, environment, SCHEMA
 from app.models.db import User
 from sqlalchemy.sql import text
+from .data import users
 import datetime
 
 
@@ -11,12 +12,19 @@ def seed_users():
             password = user["password"],
             email = user["email"],
             first_name = user["first_name"],
-            last_name=user["last_name"],
-            buying_power=user["buying_power"],
-            title=user["title"],
-            created_at=user["created_at"],
-            updated_at=user["updated_at"]
+            dietary_preferences = user["dietary_preferences"],
+            recipes = user["recipes"] 
         )
         db.session.add(new_user)
 
     db.session.commit()
+
+def undo_users():
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.users RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute(text("DELETE FROM users"))
+    
+    db.session.commit()
+
+    
