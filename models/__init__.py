@@ -69,8 +69,7 @@ class Recipe(db.Model):
     prep_time = db.Column(db.String(255))
     cooking_time = db.Column(db.String(255))
     servings = db.Column(db.String(255))
-    recipe_ingredients = db.relationship(
-        'RecipeIngredient', backref='recipe')
+    recipe_ingredients = db.Column(db.String(255))
 
     def to_dict(self):
         return {
@@ -84,4 +83,5 @@ class Recipe(db.Model):
             'prep_time': self.prep_time,
             'cooking_time': self.cooking_time,
             'servings': self.servings,
+            'recipe_ingredients': self.recipe_ingredients
         }
