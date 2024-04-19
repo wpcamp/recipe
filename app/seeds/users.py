@@ -1,6 +1,6 @@
 from app.models import db, environment, SCHEMA
-from app.models.db import User
-from sqlalchemy.sql import text
+from app.models import User
+from sqlalchemy.sql.expression import text
 from .data import users
 
 

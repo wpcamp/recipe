@@ -2,7 +2,7 @@ from flask.cli import AppGroup
 from .ingredients import seed_ingredients, undo_ingredients
 from .users import seed_users, undo_users
 from .recipes import seed_recipes, undo_recipes
-from app.models.db import db, environment, SCHEMA
+from app.models import db, environment, SCHEMA
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
